@@ -1,4 +1,3 @@
-const Card = require("./card.js");
 const Deck = require("./deck.js");
 const Hand = require("./hand.js");
 
