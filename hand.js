@@ -2,7 +2,7 @@ class Hand {
     hand = [];
 
     constructor(name){
-        this.name = 0;
+        this.name = name;
         this.score = 0;
     }
     getName(){

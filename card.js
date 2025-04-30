@@ -4,7 +4,7 @@ class Card {
         this.value = value;
         this.suit = suit;
     }
-    getVal(){
+    getValue(){
         return this.value;
     }
     getName(){
