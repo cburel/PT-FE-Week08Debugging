@@ -1,0 +1,55 @@
+const Card = require("./card.js");
+
+class Deck{
+    deck = [];
+    cardSuits = [
+        "Spades 🗡️",
+        "Hearts ❤️",
+        "Diamonds 💎",
+        "Clubs 🍀"
+    ];
+    cardValues = [
+        { name: "Two", value: 2 },
+        { name: "Three", value: 3 },
+        { name: "Four", value: 4 },
+        { name: "Five", value: 5 },
+        { name: "Six", value: 6 },
+        { name: "Seven", value: 7 },
+        { name: "Eight", value: 8 },
+        { name: "Nine", value: 9 },
+        { name: "Ten", value: 10 },
+        { name: "Jack", value: 11 },
+        { name: "Queen", value: 12 },
+        { name: "King", value: 13 },
+        { name: "Ace", value: 14}
+    ];
+
+    constructor(){
+        for (const key in this.deck)
+            {
+                const value = this.deck[key];
+                let i = 2;
+                for (let na of this.cardSuits){
+                    let card = new Card(na, value);
+                    this.deck.push(card);
+                    i++;
+            }
+        }
+    }
+
+    shuffle(deck) {
+        // Fisher-Yates shuffle
+        for (let i = deck.length - 1; i >= 1; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [deck[i], deck[j]] = [deck[j], deck[i]];
+        }
+        return deck;
+    }
+
+    draw(){
+        let card = this.deck.shift();
+        return card;        
+    }
+};
+
+module.exports = Deck;

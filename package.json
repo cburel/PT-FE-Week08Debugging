@@ -1,0 +1,23 @@
+{
+  "name": "week09-debugging",
+  "version": "1.0.0",
+  "description": "\"# PT-FE-Week08Debugging\"",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cburel/PT-FE-Week08Debugging.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cburel/PT-FE-Week08Debugging/issues"
+  },
+  "homepage": "https://github.com/cburel/PT-FE-Week08Debugging#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.5"
+  }
+}
