@@ -21,23 +21,19 @@ class Deck{
         { name: "Jack", value: 11 },
         { name: "Queen", value: 12 },
         { name: "King", value: 13 },
-        { name: "Ace", value: 14}
+        { name: "Ace", value: 14 }
     ];
 
     constructor(){
-        for (const key in this.deck)
-            {
-                const value = this.deck[key];
-                let i = 2;
-                for (let na of this.cardSuits){
-                    let card = new Card(na, value);
-                    this.deck.push(card);
-                    i++;
+        for (const suit of this.cardSuits){
+            for (const cardValue of this.cardValues){
+                const card = new Card(cardValue.value, suit);
+                this.deck.push(card);
             }
         }
     }
 
-    shuffle(deck) {
+    shuffle(deck = this.deck) {
         // Fisher-Yates shuffle
         for (let i = deck.length - 1; i >= 1; i--) {
             const j = Math.floor(Math.random() * (i + 1));

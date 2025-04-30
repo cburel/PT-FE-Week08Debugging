@@ -1,6 +1,3 @@
-const Card = require("./card.js");
-const Deck = require("./deck.js");
-
 class Hand {
     hand = [];
 

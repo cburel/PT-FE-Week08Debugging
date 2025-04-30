@@ -1,5 +1,3 @@
-const Deck = require("./deck.js");
-
 // Four suits to represent the appearance (user interface - ui) for your cards
 class Card {
     constructor(value, suit) {
