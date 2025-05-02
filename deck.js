@@ -24,6 +24,7 @@ class Deck{
         { name: "Ace", value: 14 }
     ];
 
+    // create cards and push them into the deck
     constructor(){
         for (const suit of this.cardSuits){
             for (const cardValue of this.cardValues){
@@ -33,18 +34,17 @@ class Deck{
         }
     }
 
-    shuffle(deck = this.deck) {
+    shuffle() {
         // Fisher-Yates shuffle
-        console.log("Deck length: " + deck.length);
-        for (let i = deck.length - 1; i > 0; i--) {
+        for (let i = this.deck.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
-            [deck[i], deck[j]] = [deck[j], deck[i]];
+            [this.deck[i], this.deck[j]] = [this.deck[j], this.deck[i]];
         }
-        return deck;
+        return this.deck;
     }
 
     draw(){
-        let card = this.deck.shift();
+        let card = this.deck.shift();   // removes a card from the front of the array
         return card;        
     }
 };

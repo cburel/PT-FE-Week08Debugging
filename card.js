@@ -4,12 +4,15 @@ class Card {
         this.value = value;
         this.suit = suit;
     }
+
     getValue(){
         return this.value;
     }
+
     getName(){
         return this.name;
     }
+    
     describe(){
         return `${this.value} of ${this.suit}`;
     }
